@@ -1,0 +1,7 @@
+org\librarypro\webapp\batch\AbstractJob.class
+org\librarypro\webapp\batch\Task.class
+org\librarypro\webapp\batch\Mail.class
+org\librarypro\webapp\batch\App.class
+org\librarypro\webapp\batch\Task$1.class
+org\librarypro\webapp\batch\BatchLancher.class
+org\librarypro\webapp\batch\Task$2.class

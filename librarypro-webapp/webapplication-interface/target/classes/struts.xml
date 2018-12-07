@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <package name="home" namespace="/" extends="struts-default" >
+
+       
+        <action name="hello" class="hello.WorldAction" method="execute">
+        	
+        	<result name="success" >/hello.jsp</result>
+        </action>
+        
+          <action name="form" class="hello.Formulaire" method="execute">
+        	
+        	<result name="success" >/addOuvrageForm.jsp</result>
+        </action>
+        
+         <action name="listeouvrage" class="hello.Listeouvrage" method="execute">
+        	
+        	<result name="success" >/list.jsp</result>
+        </action>
+        
+        <action name="recherchesaveouvrage" class="hello.RecherchesaveouvrageAction" method="execute">
+        	
+        	<result name="success" >/searchBook.jsp</result>
+        </action>
+        
+        <action name="rechercheouvrageauteur" class="hello.RechercheOuvrageByAuteur" method="execute">
+        	
+        	<result name="success" >/searchBook.jsp</result>
+        </action>
+     
+        
+        <action name="logintest" class="hello.FormloginAction" method="execute">
+        	
+        	<result name="success" >/loginform.jsp</result>
+        </action>
+        
+        
+         <action name="login" class="hello.LoginAction" method="execute">
+        	
+        	<result name="success" type="redirectAction">pret</result>
+        	
+        	<result name="error" >/loginform.jsp</result>
+        </action>
+        
+        <action name="logout" class="hello.LoginAction" method="logout">
+        	
+        	<result name="success" type="redirectAction">listeouvrage</result>
+        	
+        </action>
+        
+        <action name="pret" class="hello.PretAction" method="execute">
+        	
+        	<result name="success" >/tableaubord.jsp</result>
+        	<result name="error" >/loginform.jsp</result>
+        	
+        </action>
+        
+         
+        
+        <!-- <action name="profil" class="hello.Monprofil">  
+            <result name="success" >/welcome.jsp</result>  
+            <result name="error" >/loginform.jsp</result>
+        </action> -->
+        
+         
+        
+        <action name="prolonger" class="hello.ProlongerAction" method="execute">  
+           
+            <result name="success" type="redirectAction">pret</result>
+        	
+        	<result name="error" >/list.jsp</result>
+        </action> 
+        
+    
+    </package>
+    
+   
+   
+</struts>
