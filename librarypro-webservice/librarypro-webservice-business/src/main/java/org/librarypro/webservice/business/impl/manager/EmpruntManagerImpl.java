@@ -23,7 +23,6 @@ public class EmpruntManagerImpl extends AbstractManagerImpl  implements EmpruntM
 	public String prolonge(EmpruntDTO e) {
 		Emprunt e1=getConvfac().getEmpruntConversion().toEmpruntEntity(e, true, Emprunt.class.getSimpleName());
 		Date today= new Date();
-		System.out.println(today);
 		if(!e.getDateretour().before(today)) {
 			getDaoFc().getEmpruntDao().prolonge(e1);
 		}

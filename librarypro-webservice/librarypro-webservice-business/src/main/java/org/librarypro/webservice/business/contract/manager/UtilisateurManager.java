@@ -12,6 +12,8 @@ public interface UtilisateurManager {
 	    boolean valid(String email, String mdp);
 	   
 	    UtilisateurDTO utilisateursparmail(String email);
+	    
+	    UtilisateurDTO utilisateurparid(int id);
 		
 
 }

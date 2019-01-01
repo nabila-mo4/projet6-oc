@@ -1,9 +1,11 @@
 package org.librarypro.webapp.consumer.impl;
 
 import org.librarypro.webapp.consumer.contract.DaoFactory;
+
 import org.librarypro.webapp.consumer.contract.dao.AuteurDao;
 import org.librarypro.webapp.consumer.contract.dao.EmpruntDao;
 import org.librarypro.webapp.consumer.contract.dao.OuvrageDao;
+import org.librarypro.webapp.consumer.contract.dao.ReservationDao;
 import org.librarypro.webapp.consumer.contract.dao.UtilisateurDao;
 
 public class DaoFactoryImpl implements DaoFactory {
@@ -12,6 +14,15 @@ public class DaoFactoryImpl implements DaoFactory {
 	private AuteurDao auteurDao;
 	private EmpruntDao empruntDao;
 	private UtilisateurDao utilisateurDao;
+	private ReservationDao reservationDao;
+
+	public ReservationDao getReservationDao() {
+		return reservationDao;
+	}
+
+	public void setReservationDao(ReservationDao reservationDao) {
+		this.reservationDao = reservationDao;
+	}
 
 	public OuvrageDao getOuvrageDao() {
 		return ouvrageDao;

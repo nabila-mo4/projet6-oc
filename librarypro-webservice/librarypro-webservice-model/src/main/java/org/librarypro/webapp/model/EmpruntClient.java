@@ -35,7 +35,7 @@ public interface EmpruntClient {
     @Action(input = "model.webapp.librarypro.org/EmpruntClient/addRequest", output = "model.webapp.librarypro.org/EmpruntClient/addResponse")
     public void add(
         @WebParam(name = "arg0", targetNamespace = "")
-        EmpruntDTO arg0);
+        ReservationDTO arg0);
 
     /**
      * 
@@ -90,18 +90,6 @@ public interface EmpruntClient {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "prolonger", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.Prolonger")
-    @ResponseWrapper(localName = "prolongerResponse", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.ProlongerResponse")
-    @Action(input = "model.webapp.librarypro.org/EmpruntClient/prolongerRequest", output = "model.webapp.librarypro.org/EmpruntClient/prolongerResponse")
-    public void prolonger(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
      * @return
      *     returns java.util.List<org.librarypro.webapp.model.EmpruntDTO>
      */
@@ -111,5 +99,17 @@ public interface EmpruntClient {
     @ResponseWrapper(localName = "empruntsEnCoursResponse", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.EmpruntsEnCoursResponse")
     @Action(input = "model.webapp.librarypro.org/EmpruntClient/empruntsEnCoursRequest", output = "model.webapp.librarypro.org/EmpruntClient/empruntsEnCoursResponse")
     public List<EmpruntDTO> empruntsEnCours();
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "prolonger", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.Prolonger")
+    @ResponseWrapper(localName = "prolongerResponse", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.ProlongerResponse")
+    @Action(input = "model.webapp.librarypro.org/EmpruntClient/prolongerRequest", output = "model.webapp.librarypro.org/EmpruntClient/prolongerResponse")
+    public void prolonger(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
 }

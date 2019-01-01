@@ -30,9 +30,10 @@
   			<configuration>
   				<sourceDestDir>${project.basedir}/src/main/java</sourceDestDir>
   				<wsdlUrls>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/OuvrageService?wsdl</wsdlUrl>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/EmpruntService?wsdl</wsdlUrl>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/UtilisateurService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/OuvrageService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/EmpruntService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/UtilisateurService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/ReservationService?wsdl</wsdlUrl>
   					
   				</wsdlUrls>
   			</configuration>

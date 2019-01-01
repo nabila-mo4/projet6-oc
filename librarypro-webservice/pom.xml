@@ -4,7 +4,7 @@
 
   <groupId>org.oc</groupId>
   <artifactId>librarypro-webservice</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT-ENHANCEMENTS</version>
   <packaging>pom</packaging>
 
   <name>librarypro-webservice</name>

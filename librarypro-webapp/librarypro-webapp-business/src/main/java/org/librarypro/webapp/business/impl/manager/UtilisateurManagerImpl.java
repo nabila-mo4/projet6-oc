@@ -25,4 +25,9 @@ public class UtilisateurManagerImpl extends AbstractManagerImpl implements Utili
 		
 	}
 
+
+	public UtilisateurDTO getUtilisateurById(int id) {
+		return getDaoFactory().getUtilisateurDao().getUtilisateurById(id);
+	}
+
 }

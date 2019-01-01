@@ -31,6 +31,8 @@ private String titre;
 	
 	
 
+	
+
 	public boolean isEtat() {
 		return etat;
 	}

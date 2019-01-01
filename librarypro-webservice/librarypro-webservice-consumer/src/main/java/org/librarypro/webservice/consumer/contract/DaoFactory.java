@@ -3,6 +3,7 @@ package org.librarypro.webservice.consumer.contract;
 import org.librarypro.webservice.consumer.contract.dao.AuteurDao;
 import org.librarypro.webservice.consumer.contract.dao.EmpruntDao;
 import org.librarypro.webservice.consumer.contract.dao.OuvrageDao;
+import org.librarypro.webservice.consumer.contract.dao.ReservationDao;
 import org.librarypro.webservice.consumer.contract.dao.UtilisateurDao;
 
 public interface DaoFactory {
@@ -19,5 +20,8 @@ public interface DaoFactory {
 	
 	UtilisateurDao getUtilisateurDao();
 	void setUtilisateurDao(UtilisateurDao utilisateurDao);
+	
+    ReservationDao getReservationDao();
+	void setReservationDao(ReservationDao reservationDao);
 	
 }

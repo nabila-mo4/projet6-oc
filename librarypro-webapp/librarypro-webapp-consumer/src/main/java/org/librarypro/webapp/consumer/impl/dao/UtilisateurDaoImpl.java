@@ -25,6 +25,13 @@ public class UtilisateurDaoImpl extends AbstractDao implements UtilisateurDao{
 	}
 
 
+
+
+	public UtilisateurDTO getUtilisateurById(int id) {
+		return getUtilisateurClient().getUtilisateurById(id);
+	}
+
+
 	
 
 	

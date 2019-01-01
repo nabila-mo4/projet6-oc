@@ -63,4 +63,13 @@ public class  UtilisateurManagerImpl extends AbstractManagerImpl implements Util
 		
 	}
 
+
+	@Override
+	public UtilisateurDTO utilisateurparid(int id) {
+		UtilisateurDTO utilisateurDTO = new UtilisateurDTO();
+		 Utilisateur utilisateur= getDaoFc().getUtilisateurDao().getUtilisateurById(id);
+		 return getConvfac().getUtilisateurConversion().toUtilisateurDTO(utilisateur, true, utilisateurDTO.getClass().getName());
+		
+	}
+
 }

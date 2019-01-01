@@ -5,26 +5,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	 http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 	
-	
-	 
-  
-        
-    
-	
+
 	 <bean id="ouvrageDao" class="org.librarypro.webapp.consumer.impl.dao.OuvrageDaoImpl"/>
 	 <bean id="utilisateurDao" class="org.librarypro.webapp.consumer.impl.dao.UtilisateurDaoImpl"/>
 	 <bean id="empruntDao" class="org.librarypro.webapp.consumer.impl.dao.EmpruntDaoImpl"/>
-	 
+	  <bean id="reservationDao" class="org.librarypro.webapp.consumer.impl.dao.ReservationDaoImpl"/>
 	 
 	 <bean id="daoFactory" class="org.librarypro.webapp.consumer.impl.DaoFactoryImpl">
 	 
 	 	<property name="ouvrageDao" ref="ouvrageDao"/>	
 	 	<property name="utilisateurDao" ref="utilisateurDao"/>	
 	 	<property name="empruntDao" ref="empruntDao"/>	
+	 	<property name="reservationDao" ref="reservationDao"/>	
 	 </bean>
-	 
-	 
-	 
-	 
-	
+
 </beans>

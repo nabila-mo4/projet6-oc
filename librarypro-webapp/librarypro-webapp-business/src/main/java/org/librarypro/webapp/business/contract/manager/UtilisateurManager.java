@@ -9,5 +9,6 @@ public interface UtilisateurManager {
 	List<UtilisateurDTO> users();
 	boolean valider(String email, String mdp);
 	UtilisateurDTO getUtilisateurByEmail(String email);
+	UtilisateurDTO getUtilisateurById(int id);
 
 }

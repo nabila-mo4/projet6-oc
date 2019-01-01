@@ -1,10 +1,12 @@
 org\librarypro\webapp\business\impl\manager\AuteurManagerImpl.class
 org\librarypro\webapp\business\contract\manager\AuteurManager.class
 org\librarypro\webapp\business\impl\manager\EmpruntManagerImpl.class
+org\librarypro\webapp\business\impl\manager\ReservationManagerImpl.class
 org\librarypro\webapp\business\contract\manager\UtilisateurManager.class
 org\librarypro\webapp\business\contract\ManagerFactory.class
 org\librarypro\webapp\business\impl\manager\OuvrageManagerImpl.class
 org\librarypro\webapp\business\impl\ManagerFactoryImpl.class
+org\librarypro\webapp\business\contract\manager\ReservationManager.class
 org\librarypro\webapp\business\contract\manager\EmpruntManager.class
 org\librarypro\webapp\business\impl\manager\AbstractManagerImpl.class
 org\librarypro\webapp\business\contract\manager\OuvrageManager.class

@@ -1,8 +1,6 @@
 package org.librarypro.webservice.model.entities;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Auteur implements Serializable {
 	

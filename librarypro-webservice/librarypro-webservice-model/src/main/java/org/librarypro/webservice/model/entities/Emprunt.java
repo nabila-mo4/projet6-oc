@@ -1,7 +1,9 @@
 package org.librarypro.webservice.model.entities;
 
 import java.io.Serializable;
+
 import java.util.Date;
+
 
 public class Emprunt implements Serializable{
 	private int idutilisateur;

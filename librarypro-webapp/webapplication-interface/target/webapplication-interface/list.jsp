@@ -93,6 +93,7 @@
                   					<thead>
                     						<tr >
                        							 <th class="text-center">Action</th>
+                       							 <th>idouvrage</th>
                        							 <th>ISBN </th>
                        							 <th>Auteur</th>
                         						 <th> Titre </th>
@@ -103,12 +104,15 @@
 												  <th> Nombre de pages</th>
 												  <th>Nombre total </th>
 												  <th>Etat </th>
+												  <th>Action</th>
+												  
 												
 												 
                   							</tr> 
                  				    </thead>
                   					<tbody>
                   						<s:iterator value="ouvrages">
+                  						
                   						
                   						
                          					 <tr>
@@ -124,12 +128,12 @@
                                                       </a>
                            						 </td>
                            						
-                            				    
+                            				     <td ><s:property value="idouvrage"></s:property></td>
                           					     <td ><s:property value="isbn"></s:property></td>
                           					     <td ><s:property value="auteur.idauteur"></s:property></td>
                           					     <td ><s:property value="titre"></s:property></td>
                           					     <td ><s:property value="langue"></s:property></td>
-                          					     <td ><s:property value="domaine"></s:property></td>
+                          					     <td ><s:property value="domaine"/></td>
                           					     <td ><s:property value="editeur"></s:property></td>
                           					     
                           					     <td ><s:date name="datepublication.toGregorianCalendar()"
@@ -141,9 +145,34 @@
 									                 <s:if test="%{etat==false}"> Indisponible</s:if> 
 									                 <s:else> Disponible </s:else>
 								                </td>
+								                
+								                
+								                <td>
+								                <s:if test="%{etat==false}">
+								                
+								                <s:url action="reserver.action" var="urlReservation" >
+                                                     <s:param name="idouvrage"><s:property value="idouvrage"></s:property></s:param>
+                                                     
+                                                 </s:url>
+                                                      <a href="<s:property value="#urlReservation" />" 
+                                                      class="btn btn-primary" style="color: #fff;background-color: #007bff;border-color: #007bff;">
+                                                      Réserver
+                                                      
+                                                      </a>
+                                                
+                                                </s:if>
+                                               
+                                                <s:else>Non réservable</s:else>
+								                </td>
+								                
                           					  
                           					</tr>
                           				</s:iterator>
+                          				
+                          				<s:iterator value="ouvrages">
+                          				<s:property value="ouvrages.size()"></s:property>
+                          				</s:iterator>
+                          				
                      			    </tbody>
                			 </table>
              	   </div>

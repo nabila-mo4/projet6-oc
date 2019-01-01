@@ -27,6 +27,18 @@ public interface UtilisateurClient {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<org.librarypro.webapp.model.UtilisateurDTO>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "users", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.Users")
+    @ResponseWrapper(localName = "usersResponse", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.UsersResponse")
+    @Action(input = "model.webapp.librarypro.org/UtilisateurClient/usersRequest", output = "model.webapp.librarypro.org/UtilisateurClient/usersResponse")
+    public List<UtilisateurDTO> users();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns org.librarypro.webapp.model.UtilisateurDTO
@@ -39,18 +51,6 @@ public interface UtilisateurClient {
     public UtilisateurDTO getUtilisateurByEmail(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<org.librarypro.webapp.model.UtilisateurDTO>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "users", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.Users")
-    @ResponseWrapper(localName = "usersResponse", targetNamespace = "model.webapp.librarypro.org", className = "org.librarypro.webapp.model.UsersResponse")
-    @Action(input = "model.webapp.librarypro.org/UtilisateurClient/usersRequest", output = "model.webapp.librarypro.org/UtilisateurClient/usersResponse")
-    public List<UtilisateurDTO> users();
 
     /**
      * 

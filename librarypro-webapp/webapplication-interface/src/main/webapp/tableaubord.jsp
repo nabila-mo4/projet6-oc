@@ -82,7 +82,19 @@
 								                     <a href="<s:property value="#prolong" />">Prolonger</a>
 								                 	</td>
 								                 </s:else>
-                          					     
+                          					     <!--<s:if test="%{encours==true} ">
+									              <td>Impossible de prolonger</td>
+							                  	</s:if>
+							                  	<s:else>
+							                 		
+							                 		<td>non
+							                 		<!--<s:url action="prolonger.action" var="prolong">
+									                   <s:param name="idemprunt"><s:property value="idemprunt" /></s:param>
+								                     </s:url>
+								                       
+								                     <a href="<s:property value="#prolong" />">Prolonger</a>
+							                     </td>
+							                	</s:else>-->
                           					   
                           					  
                           					</tr>

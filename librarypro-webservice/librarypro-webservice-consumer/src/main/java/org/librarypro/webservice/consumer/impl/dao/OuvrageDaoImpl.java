@@ -76,6 +76,7 @@ public class OuvrageDaoImpl implements OuvrageDao{
 			paramSource.addValue("nbtotal", ouvrage.getNbtotal());
 			paramSource.addValue("nbrestant", ouvrage.getNbrestant());
 			paramSource.addValue("idauteur", ouvrage.getAuteur());
+			paramSource.addValue("etat", ouvrage.isEtat());
 			//paramSource.addValue("nom", ouvrage.getAuteur());
 			
 			
@@ -98,6 +99,7 @@ public class OuvrageDaoImpl implements OuvrageDao{
 			ouvrage.setNbpages(rs.getInt("nbpages"));
 			ouvrage.setNbrestant(rs.getInt("nbrestant"));
 			ouvrage.setNbtotal(rs.getInt("nbtotal"));
+			ouvrage.setEtat(rs.getBoolean("etat"));
 			Auteur auteur= new Auteur();
 			auteur.setIdauteur(rs.getInt("idauteur"));
 			
@@ -125,6 +127,7 @@ public class OuvrageDaoImpl implements OuvrageDao{
 			ouvrage.setNbpages(rs.getInt("nbpages"));
 			ouvrage.setNbrestant(rs.getInt("nbrestant"));
 			ouvrage.setNbtotal(rs.getInt("nbtotal"));
+			ouvrage.setEtat(rs.getBoolean("etat"));
 			Auteur auteur= new Auteur();
 			auteur.setIdauteur(rs.getInt("idauteur"));
 			
@@ -140,8 +143,8 @@ public class OuvrageDaoImpl implements OuvrageDao{
 
 	public void create(Ouvrage ouvrage) {
 	
-		String sql="INSERT INTO ouvrage (titre,langue,domaine,editeur,datepublication,isbn,nbpages,nbtotal,nbrestant,idauteur)"
-				+ " VALUES (:titre,:langue,:domaine,:editeur,:datepublication,:isbn,:nbpages,:nbtotal,:nbrestant,:idauteur)";
+		String sql="INSERT INTO ouvrage (titre,langue,domaine,editeur,datepublication,isbn,nbpages,nbtotal,nbrestant,etat,idauteur)"
+				+ " VALUES (:titre,:langue,:domaine,:editeur,:datepublication,:isbn,:nbpages,:nbtotal,:nbrestant,:etat,:idauteur)";
         
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModelone(ouvrage));
 		
@@ -168,7 +171,7 @@ public class OuvrageDaoImpl implements OuvrageDao{
 
 	public void update(Ouvrage ouvrage) {
 		String sql="UPDATE ouvrage SET titre=:titre, langue=:langue, domaine=:domaine, editeur=:editeur, datepublication=:datepublication,"
-				+ "isbn=:isbn, nbpages=:nbpages,nbtotal=:nbtotal, nbrestant=:nbrestant, idauteur=:idauteur WHERE idouvrage=:idouvrage";
+				+ "isbn=:isbn, nbpages=:nbpages,nbtotal=:nbtotal, nbrestant=:nbrestant,etat=:etat, idauteur=:idauteur WHERE idouvrage=:idouvrage";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(ouvrage));
 		
 	}
@@ -208,6 +211,7 @@ public class OuvrageDaoImpl implements OuvrageDao{
 			ouvrage.setNbpages(rs.getInt("nbpages"));
 			ouvrage.setNbrestant(rs.getInt("nbrestant"));
 			ouvrage.setNbtotal(rs.getInt("nbtotal"));
+			ouvrage.setEtat(rs.getBoolean("etat"));
 			Auteur auteur= new Auteur();
 			auteur.setIdauteur(rs.getInt("idauteur"));
 			

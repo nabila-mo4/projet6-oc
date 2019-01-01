@@ -16,4 +16,6 @@ public interface ConversionFactory {
 	UtilisateurConversion getUtilisateurConversion();
 	void setUtilisateurConversion(UtilisateurConversion utilisateurConversion);
 
+	ReservationConversion getReservationConversion();
+	void setReservationConversion(ReservationConversion reservationConversion);
 }

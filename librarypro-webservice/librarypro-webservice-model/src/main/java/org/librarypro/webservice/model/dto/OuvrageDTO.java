@@ -20,6 +20,8 @@ public class OuvrageDTO {
 	private String nom;
 	private boolean etat;
 	
+	
+	
 	public boolean isEtat() {
 		return etat;
 	}

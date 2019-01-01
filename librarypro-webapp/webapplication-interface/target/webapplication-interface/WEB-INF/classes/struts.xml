@@ -22,8 +22,11 @@
         
          <action name="listeouvrage" class="hello.Listeouvrage" method="execute">
         	
-        	<result name="success" >/list.jsp</result>
+          <result name="success" >/list.jsp</result> 
+        	
         </action>
+         
+       
         
         <action name="recherchesaveouvrage" class="hello.RecherchesaveouvrageAction" method="execute">
         	
@@ -78,7 +81,27 @@
         	<result name="error" >/list.jsp</result>
         </action> 
         
-    
+        
+        
+        
+        
+        
+        <action name="verifierReservation" class="hello.Listeouvrage" method="check">
+        	
+        	<result name="success" >/list.jsp</result>
+        </action>
+        
+           <action name="reservation" class="hello.Reservation" method="execute">
+        	
+        	<result name="success" >/reservations.jsp</result>
+        </action>
+        
+       
+        <action name="reserver" class="hello.ReserverAction" method="execute">  
+            <param name="idouvrage"></param>
+        	<result name="success">/reservation.jsp</result>
+        </action> 
+  
     </package>
     
    

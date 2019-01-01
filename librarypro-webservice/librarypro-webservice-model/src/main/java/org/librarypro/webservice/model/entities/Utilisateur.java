@@ -86,6 +86,17 @@ private int idutilisateur;
 	}
 
 
+	public Utilisateur(int idutilisateur) {
+		super();
+		this.idutilisateur = idutilisateur;
+	}
+
+
+	public Utilisateur() {
+		super();
+	}
+
+
 	/*public Set<EmpruntDTO> getEmprunts() {
 		return emprunts;
 	}
@@ -96,9 +107,7 @@ private int idutilisateur;
 	}*/
 
 
-	public Utilisateur() {
-		super();
-	}
+	
 	
 
 }

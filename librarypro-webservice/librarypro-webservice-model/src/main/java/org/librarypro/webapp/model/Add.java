@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{model.webapp.librarypro.org}empruntDTO" minOccurs="0"/>
+ *         &lt;element name="arg0" type="{model.webapp.librarypro.org}reservationDTO" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -31,17 +31,17 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class Add {
 
-    protected EmpruntDTO arg0;
+    protected ReservationDTO arg0;
 
     /**
      * Obtient la valeur de la propriété arg0.
      * 
      * @return
      *     possible object is
-     *     {@link EmpruntDTO }
+     *     {@link ReservationDTO }
      *     
      */
-    public EmpruntDTO getArg0() {
+    public ReservationDTO getArg0() {
         return arg0;
     }
 
@@ -50,10 +50,10 @@ public class Add {
      * 
      * @param value
      *     allowed object is
-     *     {@link EmpruntDTO }
+     *     {@link ReservationDTO }
      *     
      */
-    public void setArg0(EmpruntDTO value) {
+    public void setArg0(ReservationDTO value) {
         this.arg0 = value;
     }
 

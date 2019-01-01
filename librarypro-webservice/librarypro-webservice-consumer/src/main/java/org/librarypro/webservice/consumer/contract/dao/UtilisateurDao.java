@@ -9,5 +9,7 @@ public interface UtilisateurDao {
 	public List<Utilisateur> list();
 
 	Utilisateur getUtilisateurByEmail(String email);
+	
+	Utilisateur getUtilisateurById(int id);
 
 }

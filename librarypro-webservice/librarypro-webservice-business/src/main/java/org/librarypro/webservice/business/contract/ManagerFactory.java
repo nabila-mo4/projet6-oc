@@ -3,6 +3,7 @@ package org.librarypro.webservice.business.contract;
 import org.librarypro.webservice.business.contract.manager.AuteurManager;
 import org.librarypro.webservice.business.contract.manager.EmpruntManager;
 import org.librarypro.webservice.business.contract.manager.OuvrageManager;
+import org.librarypro.webservice.business.contract.manager.ReservationManager;
 import org.librarypro.webservice.business.contract.manager.UtilisateurManager;
 import org.springframework.stereotype.Service;
 @Service
@@ -19,6 +20,9 @@ public interface ManagerFactory {
 	
 	UtilisateurManager getUtilisateurManager();
 	void setUtilisateurManager(UtilisateurManager utilisateurManager);
+	
+	ReservationManager getReservationManager();
+	void setReservationManager(ReservationManager reservationManager);
 
 
 }

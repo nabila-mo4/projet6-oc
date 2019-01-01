@@ -28,5 +28,10 @@ public class UtilisateurService extends AbstractService {
 	public UtilisateurDTO getUtilisateurByEmail(String email) {
 		return getManagerFactory().getUtilisateurManager().utilisateursparmail(email);
 	}
+	
+	@WebMethod
+	public UtilisateurDTO getUtilisateurById(int id) {
+		return getManagerFactory().getUtilisateurManager().utilisateurparid(id);
+	}
 
 }

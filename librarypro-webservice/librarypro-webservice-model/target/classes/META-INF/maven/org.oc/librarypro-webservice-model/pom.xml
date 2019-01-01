@@ -18,7 +18,7 @@
   
   <build>
   	<plugins>
-  		<plugin>
+  		<!--  <plugin>
   			<groupId>org.codehaus.mojo</groupId>
   			<artifactId>jaxws-maven-plugin</artifactId>
   			<executions>
@@ -31,13 +31,14 @@
   			<configuration>
   				<sourceDestDir>${project.basedir}/src/main/java</sourceDestDir>
   				<wsdlUrls>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/OuvrageService?wsdl</wsdlUrl>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/EmpruntService?wsdl</wsdlUrl>
-  					<wsdlUrl>http://lfr023539:8080/librarypro-webservice-interface8589775951915625231/UtilisateurService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface7091102566841682789//OuvrageService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface7091102566841682789//EmpruntService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface7091102566841682789//UtilisateurService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface7091102566841682789//ReservationService?wsdl</wsdlUrl>
   					
   				</wsdlUrls>
   			</configuration>
-  		</plugin>
+  		</plugin>-->
   	</plugins>
   </build>
   

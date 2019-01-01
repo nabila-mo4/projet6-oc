@@ -42,7 +42,31 @@
 		    </dependency>
 		
   </dependencies>
+  
   <build>
-    <finalName>librarypro-webapp-batch</finalName>
+  <finalName>librarypro-webapp-batch</finalName>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.codehaus.mojo</groupId>
+  			<artifactId>jaxws-maven-plugin</artifactId>
+  			<executions>
+  				<execution>
+  					<goals>
+  						<goal>wsimport</goal>
+  					</goals>
+  				</execution>
+  			</executions>
+  			<configuration>
+  				<sourceDestDir>${project.basedir}/src/main/java</sourceDestDir>
+  				<wsdlUrls>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/OuvrageService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/EmpruntService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/UtilisateurService?wsdl</wsdlUrl>
+  					<wsdlUrl>http://lfr023539:5050/librarypro-webservice-interface207172345459075089/ReservationService?wsdl</wsdlUrl>
+  					
+  				</wsdlUrls>
+  			</configuration>
+  		</plugin>
+  	</plugins>
   </build>
 </project>

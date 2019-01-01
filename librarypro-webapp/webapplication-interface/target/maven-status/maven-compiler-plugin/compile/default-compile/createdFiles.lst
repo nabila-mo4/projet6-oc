@@ -2,10 +2,12 @@ hello\RechercheOuvrageByAuteur.class
 hello\WorldAction.class
 hello\LoginAction.class
 hello\Monprofil.class
+hello\ReserverAction.class
 hello\FormloginAction.class
 org\librarypro\webapp\webinterface\AbstractAction.class
 hello\Formulaire.class
 hello\Listeouvrage.class
 hello\ProlongerAction.class
+hello\Reservation.class
 hello\RecherchesaveouvrageAction.class
 hello\PretAction.class

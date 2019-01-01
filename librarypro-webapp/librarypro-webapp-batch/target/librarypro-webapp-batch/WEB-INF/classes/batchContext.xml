@@ -19,7 +19,7 @@
 
 <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
         <property name="host" value="smtp.gmail.com"/>
-        <property name="port" value="465"/>
+        <property name="port" value="587"/>
         <property name="username" value="lognab77@gmail.com"/>
         <property name="password" value="azeqsdwxc"/>
         <property name="javaMailProperties">
@@ -54,19 +54,34 @@
     
      <bean id="runScheduler" class="org.librarypro.webapp.batch.BatchLancher"/>
     
-     <bean id="task" class="org.librarypro.webapp.batch.Task" scope="step"/>
+     <!--  <bean id="task" class="org.librarypro.webapp.batch.Task" scope="step"/>--> 
+     
+     <bean id="reservationTask" class="org.librarypro.webapp.batch.ReservationTask" scope="step"/>
+     
+     <bean id="rappelTask" class="org.librarypro.webapp.batch.RappelTask" scope="step"/>
 
 
     <batch:job id="scheduledJob">
-        <batch:step id="jobStep">
-            <batch:tasklet ref="task" />
+    
+     	 <batch:step id="jobStep2" next="jobStep3">
+            <batch:tasklet ref="reservationTask" />  
         </batch:step>
+        
+   		 <batch:step id="jobStep3">
+            <batch:tasklet ref="rappelTask" />  
+        </batch:step>
+        
+        
+      
+       
     </batch:job>
+    
     
     <bean id="batchLancher" class="org.librarypro.webapp.batch.BatchLancher"/>
     
     <task:scheduled-tasks>
-        <task:scheduled ref="batchLancher" method="run" cron="*/5 * * * * *"/>
+        <!-- <task:scheduled ref="batchLancher" method="run" cron="*/5 * * * * *"/>-->
+        <task:scheduled ref="batchLancher" method="run" fixed-delay="300000"/>
     </task:scheduled-tasks>
     
  </beans>

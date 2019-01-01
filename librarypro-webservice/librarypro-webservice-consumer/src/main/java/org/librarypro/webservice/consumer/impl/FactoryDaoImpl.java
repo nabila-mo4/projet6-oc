@@ -8,6 +8,7 @@ import org.librarypro.webservice.consumer.contract.DaoFactory;
 import org.librarypro.webservice.consumer.contract.dao.AuteurDao;
 import org.librarypro.webservice.consumer.contract.dao.EmpruntDao;
 import org.librarypro.webservice.consumer.contract.dao.OuvrageDao;
+import org.librarypro.webservice.consumer.contract.dao.ReservationDao;
 import org.librarypro.webservice.consumer.contract.dao.UtilisateurDao;
 
 public class FactoryDaoImpl implements DaoFactory{
@@ -16,6 +17,7 @@ public class FactoryDaoImpl implements DaoFactory{
     private AuteurDao auteurDao;
     private EmpruntDao empruntDao;
     private UtilisateurDao utilisateurDao;
+    private ReservationDao reservationDao;
     
 	public OuvrageDao getOuvrageDao() {
 		
@@ -51,6 +53,18 @@ public class FactoryDaoImpl implements DaoFactory{
 
 	public void setUtilisateurDao(UtilisateurDao utilisateurDao) {
 		this.utilisateurDao=utilisateurDao;
+		
+	}
+
+	@Override
+	public ReservationDao getReservationDao() {
+		
+		return reservationDao;
+	}
+
+	@Override
+	public void setReservationDao(ReservationDao reservationDao) {
+		this.reservationDao=reservationDao;
 		
 	}
 

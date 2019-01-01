@@ -28,6 +28,7 @@
 	 <bean id="auteurDao" class="org.librarypro.webservice.consumer.impl.dao.AuteurDaoImpl"/>
 	 <bean id="empruntDao" class="org.librarypro.webservice.consumer.impl.dao.EmpruntDaoImpl"/>
 	 <bean id="utilisateurDao" class="org.librarypro.webservice.consumer.impl.dao.UtilisateurDaoImpl"/>
+	 <bean id="reservationDao" class="org.librarypro.webservice.consumer.impl.dao.ReservationDaoImpl"/>
 	 
 	 
 	 <bean id="daoFactory" class="org.librarypro.webservice.consumer.impl.FactoryDaoImpl">
@@ -36,6 +37,7 @@
 	 	<property name="auteurDao" ref="auteurDao"/>
 	 	<property name="empruntDao" ref="empruntDao"/>
 	 	<property name="utilisateurDao" ref="utilisateurDao"/>
+	 	<property name="reservationDao" ref="reservationDao"/>
 	 </bean>
 	 
 	 

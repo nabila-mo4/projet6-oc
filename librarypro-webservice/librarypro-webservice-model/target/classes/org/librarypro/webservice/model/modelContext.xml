@@ -10,12 +10,14 @@
 	 <bean id="ouvrageConversion" class="org.librarypro.webservice.model.conversion.impl.OuvrageConversionImpl"/>
 	 <bean id="empruntConversion" class="org.librarypro.webservice.model.conversion.impl.EmpruntConversionImpl"/>
 	 <bean id="utilisateurConversion" class="org.librarypro.webservice.model.conversion.impl.UtilisateurConversionImpl"/>
+	 <bean id="reservationConversion" class="org.librarypro.webservice.model.conversion.impl.ReservationConversionImpl"/>
 	
 	 <bean id="conversionFactory" class="org.librarypro.webservice.model.conversion.impl.ConversionFactoryImpl">
 	 	<property name="auteurConversion" ref="auteurConversion"/>
 	 	<property name="ouvrageConversion" ref="ouvrageConversion"/>
 	 	<property name="empruntConversion" ref="empruntConversion"/>
 	 	<property name="utilisateurConversion" ref="utilisateurConversion"/>
+	 	<property name="reservationConversion" ref="reservationConversion"/>
 	 	
 	 </bean>
 	 

@@ -1,6 +1,8 @@
 org\librarypro\webapp\consumer\contract\dao\AuteurDao.class
 org\librarypro\webapp\consumer\contract\DaoFactory.class
+org\librarypro\webapp\consumer\contract\dao\ReservationDao.class
 org\librarypro\webapp\consumer\impl\dao\AuteurDaoImpl.class
+org\librarypro\webapp\consumer\impl\dao\ReservationDaoImpl.class
 org\librarypro\webapp\consumer\impl\dao\UtilisateurDaoImpl.class
 org\librarypro\webapp\consumer\contract\dao\OuvrageDao.class
 org\librarypro\webapp\consumer\contract\dao\UtilisateurDao.class

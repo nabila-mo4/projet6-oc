@@ -70,6 +70,13 @@ public class UtilisateurDaoImpl implements UtilisateurDao{
 		} 
 	}
 
+	@Override
+	public Utilisateur getUtilisateurById(int id) {
+String sql ="SELECT * FROM utilisateur WHERE idutilisateur=:idutilisateur";
+		
+		return namedParameterJdbcTemplate.queryForObject(sql, getSqlParameterByModel(new Utilisateur(id)), new UtilisateurMapper());
+	}
+
 
 	
 	

@@ -4,6 +4,8 @@ import org.librarypro.webapp.model.EmpruntClient;
 import org.librarypro.webapp.model.EmpruntService;
 import org.librarypro.webapp.model.OuvrageClient;
 import org.librarypro.webapp.model.OuvrageService;
+import org.librarypro.webapp.model.ReservationClient;
+import org.librarypro.webapp.model.ReservationService;
 import org.librarypro.webapp.model.UtilisateurClient;
 import org.librarypro.webapp.model.UtilisateurService;
 
@@ -17,6 +19,22 @@ public abstract class AbstractDao {
 	
 	private UtilisateurService utilisateurService= new UtilisateurService();
 	private UtilisateurClient utilisateurClient= utilisateurService.getUtilisateurPort();
+	
+	private ReservationService reservationService= new ReservationService();
+	
+	public ReservationService getReservationService() {
+		return reservationService;
+	}
+	public void setReservationService(ReservationService reservationService) {
+		this.reservationService = reservationService;
+	}
+	public ReservationClient getReservationClient() {
+		return reservationClient;
+	}
+	public void setReservationClient(ReservationClient reservationClient) {
+		this.reservationClient = reservationClient;
+	}
+	private ReservationClient reservationClient= reservationService.getReservationPort();
 	
 	
 	
@@ -56,8 +74,5 @@ public abstract class AbstractDao {
 	public void setOuvrageClient(OuvrageClient ouvrageClient) {
 		this.ouvrageClient = ouvrageClient;
 	}
-	
-	
-	
 
 }

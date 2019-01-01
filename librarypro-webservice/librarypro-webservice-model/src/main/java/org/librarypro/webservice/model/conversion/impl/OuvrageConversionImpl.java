@@ -59,10 +59,10 @@ public class OuvrageConversionImpl implements OuvrageConversion{
 			ouvrage1.setNom(ouvrage.getNom());
 		}
 		
-		if(ouvrage.isEtat())
-		{
+		if(ouvrage.isEtat()) {
 			ouvrage1.setEtat(ouvrage.isEtat());
 		}
+		
 
 		
 		return ouvrage1;
@@ -126,10 +126,10 @@ public class OuvrageConversionImpl implements OuvrageConversion{
 			ouvrage2.setNom(ouvrage.getNom());
 		}
 		
-		if(ouvrage.isEtat())
-		{
+		if(ouvrage.isEtat()) {
 			ouvrage2.setEtat(ouvrage.isEtat());
 		}
+		
 		
 		
 		return ouvrage2;

@@ -24,12 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Users_QNAME = new QName("model.webapp.librarypro.org", "users");
-    private final static QName _GetUtilisateurByEmail_QNAME = new QName("model.webapp.librarypro.org", "getUtilisateurByEmail");
-    private final static QName _GetUtilisateurByEmailResponse_QNAME = new QName("model.webapp.librarypro.org", "getUtilisateurByEmailResponse");
-    private final static QName _UsersResponse_QNAME = new QName("model.webapp.librarypro.org", "usersResponse");
-    private final static QName _ValiderResponse_QNAME = new QName("model.webapp.librarypro.org", "validerResponse");
-    private final static QName _Valider_QNAME = new QName("model.webapp.librarypro.org", "valider");
+    private final static QName _GetListByOuvrageResponse_QNAME = new QName("model.webapp.librarypro.org", "getListByOuvrageResponse");
+    private final static QName _AddResponse_QNAME = new QName("model.webapp.librarypro.org", "addResponse");
+    private final static QName _GetList_QNAME = new QName("model.webapp.librarypro.org", "getList");
+    private final static QName _GetListResponse_QNAME = new QName("model.webapp.librarypro.org", "getListResponse");
+    private final static QName _GetListByOuvrage_QNAME = new QName("model.webapp.librarypro.org", "getListByOuvrage");
+    private final static QName _Add_QNAME = new QName("model.webapp.librarypro.org", "add");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.librarypro.webapp.model
@@ -39,51 +39,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ValiderResponse }
+     * Create an instance of {@link Add }
      * 
      */
-    public ValiderResponse createValiderResponse() {
-        return new ValiderResponse();
+    public Add createAdd() {
+        return new Add();
     }
 
     /**
-     * Create an instance of {@link Valider }
+     * Create an instance of {@link GetListByOuvrage }
      * 
      */
-    public Valider createValider() {
-        return new Valider();
+    public GetListByOuvrage createGetListByOuvrage() {
+        return new GetListByOuvrage();
     }
 
     /**
-     * Create an instance of {@link UsersResponse }
+     * Create an instance of {@link AddResponse }
      * 
      */
-    public UsersResponse createUsersResponse() {
-        return new UsersResponse();
+    public AddResponse createAddResponse() {
+        return new AddResponse();
     }
 
     /**
-     * Create an instance of {@link GetUtilisateurByEmailResponse }
+     * Create an instance of {@link GetList }
      * 
      */
-    public GetUtilisateurByEmailResponse createGetUtilisateurByEmailResponse() {
-        return new GetUtilisateurByEmailResponse();
+    public GetList createGetList() {
+        return new GetList();
     }
 
     /**
-     * Create an instance of {@link GetUtilisateurByEmail }
+     * Create an instance of {@link GetListResponse }
      * 
      */
-    public GetUtilisateurByEmail createGetUtilisateurByEmail() {
-        return new GetUtilisateurByEmail();
+    public GetListResponse createGetListResponse() {
+        return new GetListResponse();
     }
 
     /**
-     * Create an instance of {@link Users }
+     * Create an instance of {@link GetListByOuvrageResponse }
      * 
      */
-    public Users createUsers() {
-        return new Users();
+    public GetListByOuvrageResponse createGetListByOuvrageResponse() {
+        return new GetListByOuvrageResponse();
     }
 
     /**
@@ -111,6 +111,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ReservationDTO }
+     * 
+     */
+    public ReservationDTO createReservationDTO() {
+        return new ReservationDTO();
+    }
+
+    /**
      * Create an instance of {@link EmpruntDTO }
      * 
      */
@@ -119,57 +127,57 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Users }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetListByOuvrageResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "users")
-    public JAXBElement<Users> createUsers(Users value) {
-        return new JAXBElement<Users>(_Users_QNAME, Users.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getListByOuvrageResponse")
+    public JAXBElement<GetListByOuvrageResponse> createGetListByOuvrageResponse(GetListByOuvrageResponse value) {
+        return new JAXBElement<GetListByOuvrageResponse>(_GetListByOuvrageResponse_QNAME, GetListByOuvrageResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetUtilisateurByEmail }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getUtilisateurByEmail")
-    public JAXBElement<GetUtilisateurByEmail> createGetUtilisateurByEmail(GetUtilisateurByEmail value) {
-        return new JAXBElement<GetUtilisateurByEmail>(_GetUtilisateurByEmail_QNAME, GetUtilisateurByEmail.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "addResponse")
+    public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
+        return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetUtilisateurByEmailResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getUtilisateurByEmailResponse")
-    public JAXBElement<GetUtilisateurByEmailResponse> createGetUtilisateurByEmailResponse(GetUtilisateurByEmailResponse value) {
-        return new JAXBElement<GetUtilisateurByEmailResponse>(_GetUtilisateurByEmailResponse_QNAME, GetUtilisateurByEmailResponse.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getList")
+    public JAXBElement<GetList> createGetList(GetList value) {
+        return new JAXBElement<GetList>(_GetList_QNAME, GetList.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UsersResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetListResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "usersResponse")
-    public JAXBElement<UsersResponse> createUsersResponse(UsersResponse value) {
-        return new JAXBElement<UsersResponse>(_UsersResponse_QNAME, UsersResponse.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getListResponse")
+    public JAXBElement<GetListResponse> createGetListResponse(GetListResponse value) {
+        return new JAXBElement<GetListResponse>(_GetListResponse_QNAME, GetListResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ValiderResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetListByOuvrage }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "validerResponse")
-    public JAXBElement<ValiderResponse> createValiderResponse(ValiderResponse value) {
-        return new JAXBElement<ValiderResponse>(_ValiderResponse_QNAME, ValiderResponse.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "getListByOuvrage")
+    public JAXBElement<GetListByOuvrage> createGetListByOuvrage(GetListByOuvrage value) {
+        return new JAXBElement<GetListByOuvrage>(_GetListByOuvrage_QNAME, GetListByOuvrage.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Valider }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Add }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "valider")
-    public JAXBElement<Valider> createValider(Valider value) {
-        return new JAXBElement<Valider>(_Valider_QNAME, Valider.class, null, value);
+    @XmlElementDecl(namespace = "model.webapp.librarypro.org", name = "add")
+    public JAXBElement<Add> createAdd(Add value) {
+        return new JAXBElement<Add>(_Add_QNAME, Add.class, null, value);
     }
 
 }

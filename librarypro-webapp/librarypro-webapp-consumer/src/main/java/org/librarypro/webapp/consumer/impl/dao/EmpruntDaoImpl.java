@@ -30,9 +30,7 @@ public class EmpruntDaoImpl extends AbstractDao implements EmpruntDao{
 		
 	}
 	
-	
-	
-	
+
 	public List<EmpruntDTO> getEmpruntByUtilisateur(int idutilisateur) {
 		
 		return getEmpruntClient().empruntsByUtilisateur(idutilisateur);

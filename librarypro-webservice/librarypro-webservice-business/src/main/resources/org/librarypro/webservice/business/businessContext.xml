@@ -18,6 +18,7 @@
 	<bean id="auteurManager" class ="org.librarypro.webservice.business.impl.manager.AuteurManagerImpl" parent="abstractManager"/>
     <bean id="empruntManager" class ="org.librarypro.webservice.business.impl.manager.EmpruntManagerImpl" parent="abstractManager"/>
 	<bean id="utilisateurManager" class ="org.librarypro.webservice.business.impl.manager.UtilisateurManagerImpl" parent="abstractManager"/>
+	<bean id="reservationManager" class ="org.librarypro.webservice.business.impl.manager.ReservationManagerImpl" parent="abstractManager"/>
 	
 	
 	<bean id="managerFactory" class ="org.librarypro.webservice.business.impl.ManagerFactoryImpl">
@@ -26,6 +27,7 @@
 		  <property name="auteurManager" ref="auteurManager"/>
 		  <property name="empruntManager" ref="empruntManager"/>
 		  <property name="utilisateurManager" ref="utilisateurManager"/>
+		  <property name="reservationManager" ref="reservationManager"/>
 		
 	</bean>
 	

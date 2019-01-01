@@ -1,11 +1,13 @@
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\EmpruntDao.java
-C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\EmpruntDaoImpl.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\DaoFactory.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\AbstractDao.java
+C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\ReservationDaoImpl.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\AuteurDaoImpl.java
-C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\AuteurDao.java
-C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\UtilisateurDaoImpl.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\DaoFactoryImpl.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\OuvrageDao.java
+C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\EmpruntDaoImpl.java
+C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\ReservationDao.java
+C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\AuteurDao.java
+C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\UtilisateurDaoImpl.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\contract\dao\UtilisateurDao.java
 C:\eclipse-workspace\librarypro-webapp\librarypro-webapp-consumer\src\main\java\org\librarypro\webapp\consumer\impl\dao\OuvrageDaoImpl.java

@@ -4,6 +4,7 @@ import org.librarypro.webservice.model.conversion.contract.AuteurConversion;
 import org.librarypro.webservice.model.conversion.contract.ConversionFactory;
 import org.librarypro.webservice.model.conversion.contract.EmpruntConversion;
 import org.librarypro.webservice.model.conversion.contract.OuvrageConversion;
+import org.librarypro.webservice.model.conversion.contract.ReservationConversion;
 import org.librarypro.webservice.model.conversion.contract.UtilisateurConversion;
 
 public class ConversionFactoryImpl implements ConversionFactory{
@@ -12,6 +13,7 @@ public class ConversionFactoryImpl implements ConversionFactory{
 	AuteurConversion auteurConversion;
 	EmpruntConversion empruntConversion;
 	UtilisateurConversion utilisateurConversion;
+	ReservationConversion reservationConversion;
 	
 	
 	public OuvrageConversion getOuvrageConversion() {
@@ -53,6 +55,18 @@ public class ConversionFactoryImpl implements ConversionFactory{
 	
 	public void setUtilisateurConversion(UtilisateurConversion utilisateurConversion) {
 		this.utilisateurConversion=utilisateurConversion;
+		
+	}
+
+	@Override
+	public ReservationConversion getReservationConversion() {
+		
+		return reservationConversion;
+	}
+
+	@Override
+	public void setReservationConversion(ReservationConversion reservationConversion) {
+		this.reservationConversion=reservationConversion;
 		
 	}
 

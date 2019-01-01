@@ -1,13 +1,14 @@
 package org.librarypro.webservice.prod;
 
 import java.util.Date;
+
 import java.util.List;
 
 import org.librarypro.webservice.business.contract.ManagerFactory;
-import org.librarypro.webservice.model.dto.AuteurDTO;
-import org.librarypro.webservice.model.dto.EmpruntDTO;
 import org.librarypro.webservice.model.dto.OuvrageDTO;
-import org.librarypro.webservice.model.entities.Ouvrage;
+import org.librarypro.webservice.model.dto.ReservationDTO;
+import org.librarypro.webservice.model.dto.UtilisateurDTO;
+import org.librarypro.webservice.model.entities.Reservation;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -62,7 +63,17 @@ public class MyTest {
         for(OuvrageDTO ouvrage:o) {
         System.out.println(ouvrage.getIsbn());*/
         
-       managerFactory.getEmpruntManager().prolonger(5);
+       //managerFactory.getEmpruntManager().prolonger(5);
+        //managerFactory.getReservationManager().getList(1);
+  /* ReservationDTO r= new ReservationDTO();
+   OuvrageDTO o= new OuvrageDTO();
+   UtilisateurDTO u= new UtilisateurDTO();
+   o.setIdouvrage(1);
+   u.setIdutilisateur(1);
+   r.setOuvrageDTO(o);
+   r.setUtilisateurDTO(u);
+         managerFactory.getReservationManager().add(r);*/
+
         System.out.println("n");
         
         }

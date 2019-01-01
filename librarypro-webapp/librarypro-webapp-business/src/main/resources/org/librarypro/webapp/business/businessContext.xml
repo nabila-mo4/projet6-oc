@@ -14,11 +14,13 @@
 	<bean id="ouvrageManager" class="org.librarypro.webapp.business.impl.manager.OuvrageManagerImpl" parent="abstractManager"/>
     <bean id="utilisateurManager" class="org.librarypro.webapp.business.impl.manager.UtilisateurManagerImpl" parent="abstractManager"/>
 	<bean id="empruntManager" class="org.librarypro.webapp.business.impl.manager.EmpruntManagerImpl" parent="abstractManager"/>
+	<bean id="reservationManager" class="org.librarypro.webapp.business.impl.manager.ReservationManagerImpl" parent="abstractManager"/>
 	
 	<bean id="managerFactory" class="org.librarypro.webapp.business.impl.ManagerFactoryImpl">
 		<property name="ouvrageManager" ref="ouvrageManager"/>
 		 <property name="utilisateurManager" ref="utilisateurManager"/>
 		<property name="empruntManager" ref="empruntManager"/>
+		<property name="reservationManager" ref="reservationManager"/>
 		
 	</bean>
 	
