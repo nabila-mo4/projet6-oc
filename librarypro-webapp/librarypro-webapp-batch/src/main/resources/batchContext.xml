@@ -63,14 +63,14 @@
 
     <batch:job id="scheduledJob">
     
-     	 <batch:step id="jobStep2">
+     	 <batch:step id="jobStep2" next="jobStep3">
             <batch:tasklet ref="reservationTask" />  
         </batch:step>
         
-   		 
-        
-      
-       
+   		 <batch:step id="jobStep3">
+            <batch:tasklet ref="rappelTask" />  
+        </batch:step>
+    
     </batch:job>
     
     
