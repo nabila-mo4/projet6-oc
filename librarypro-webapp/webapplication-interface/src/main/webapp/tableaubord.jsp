@@ -70,18 +70,19 @@
 								                 <s:else>
 								                      	<td>Rendu</td>
 								                 </s:else>
-								
-                          					     <s:if test="%{prolonge==false}">
-									              <td><s:url action="prolonger.action" var="prolong">
-									                   <s:param name="idemprunt"><s:property value="idemprunt" /></s:param>
-								                     </s:url>
+								                
+								                 <s:if test="prolonge || dateretour.toGregorianCalendar().before(now)" >
+								                 	<td>Impossible de prolonger</td>
+								                 </s:if>
+								                 <s:else>
+								                 	<td><s:url action="prolonger.action" var="prolong">
+									                     <s:param name="idemprunt"><s:property value="idemprunt" /></s:param>
+								                        </s:url>
 								                       
 								                     <a href="<s:property value="#prolong" />">Prolonger</a>
-							                     </td>
-							                  	</s:if>
-							                  	<s:else>
-							                 		<td>Impossible de prolonger</td>
-							                	</s:else>
+								                 	</td>
+								                 </s:else>
+                          					     
                           					   
                           					  
                           					</tr>

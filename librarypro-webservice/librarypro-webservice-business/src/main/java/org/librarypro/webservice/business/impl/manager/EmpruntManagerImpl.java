@@ -1,6 +1,8 @@
 package org.librarypro.webservice.business.impl.manager;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.librarypro.webservice.business.contract.manager.EmpruntManager;
@@ -20,8 +22,11 @@ public class EmpruntManagerImpl extends AbstractManagerImpl  implements EmpruntM
 	
 	public String prolonge(EmpruntDTO e) {
 		Emprunt e1=getConvfac().getEmpruntConversion().toEmpruntEntity(e, true, Emprunt.class.getSimpleName());
-		
-		getDaoFc().getEmpruntDao().prolonge(e1);
+		Date today= new Date();
+		System.out.println(today);
+		if(!e.getDateretour().before(today)) {
+			getDaoFc().getEmpruntDao().prolonge(e1);
+		}
 		return "c fait";
 	}
 
